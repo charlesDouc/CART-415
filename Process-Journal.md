@@ -1,2 +1,2 @@
 # Process Journal
-More to come.
+More to come. Stay tuned.
