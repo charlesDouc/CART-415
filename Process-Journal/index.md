@@ -5,4 +5,6 @@ I divided the content in different sections each reflecting a single project. Al
 
 
 * [Lights & Camera](https://github.com/charlesDouc/CART-415/blob/master/Process-Journal/LightsAndCamera.md) 
-* 
+* Sound
+* 3D Objects
+* Final Project
