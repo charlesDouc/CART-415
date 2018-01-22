@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Main.unity
+- path: Assets/LightsCamera/Scenes/P1_GreyBoxes_02.unity
   isLoaded: 1
   isActive: 1
