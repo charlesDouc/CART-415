@@ -7,11 +7,18 @@ public class BadLights : MonoBehaviour {
 	// Public variables
 	public GameObject thePlayer;		// GameObject 
 
+	float intensityLight;
+	bool openLight;
+	Light mainSpot;
 
 	// ----------------------------------------
 	// Use this for initialization
 	// ----------------------------------------
 	void Start () {
+		openLight = false;
+
+		intensityLight = 0f;
+		mainSpot = gameObject.GetComponent <Light> ();
 		
 	}
 
@@ -20,6 +27,11 @@ public class BadLights : MonoBehaviour {
 	// Update is called once per frame
 	// ----------------------------------------
 	void Update () {
+		if (intensityLight < 13.5f && openLight) {
+			intensityLight += 0.1f;
+		}
+
+		mainSpot.intensity = intensityLight;
 		
 		
 	}
@@ -39,6 +51,10 @@ public class BadLights : MonoBehaviour {
 		lightControl TankLightScript = thePlayer.GetComponent <lightControl> ();
 		TankLightScript.antennaStatus = true;
 		//Debug.Log ("Enter");
+	}
+
+	public void lightUp () {
+		openLight = true;
 	}
 
 }
