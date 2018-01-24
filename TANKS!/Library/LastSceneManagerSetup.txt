@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LightsCamera/Scenes/P1_GreyBoxes_02.unity
+- path: Assets/LightsCamera/Scenes/Projector.unity
   isLoaded: 1
   isActive: 1
