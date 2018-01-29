@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\cameras_control.cs" />
+     <Compile Include="Assets\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\BadLights.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\EnnemyTrigger_Controller.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Tank\lightControl.cs" />
