@@ -28,7 +28,7 @@ public class BadLights : MonoBehaviour {
 	// ----------------------------------------
 	void Update () {
 		if (intensityLight < 13.5f && openLight) {
-			intensityLight += 0.1f;
+			intensityLight += 0.5f;
 		}
 
 		mainSpot.intensity = intensityLight;

@@ -7,8 +7,10 @@ public class changeZoneTrigger: MonoBehaviour {
 	// public variables
 	public int cameraIndex;
 	public GameObject cameraControls;
-	public bool toBeDestroyed;
 	public GameObject nextTrigger;
+	public GameObject nextZone;
+	public GameObject pastZone;
+	public bool toBeDestroyed;
 
 	// private variables
 	private bool goBack;
@@ -21,11 +23,18 @@ public class changeZoneTrigger: MonoBehaviour {
 	void Start () {
 		goBack = false;
 	}
-
+		
+		
 	// ---------------------------------------
 	// Methods
 	// ---------------------------------------
 	void OnTriggerEnter () {
+		// Deactivate the past zone
+		pastZone.SetActive (false);
+		// Activate next zone
+		nextZone.SetActive (true);
+
+
 		// Get the cameras control script
 		cameras_control mainCameraScript = cameraControls.GetComponent <cameras_control> ();
 		// If the player is going back

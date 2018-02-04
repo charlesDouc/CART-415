@@ -7,8 +7,10 @@ public class cameraTriggers : MonoBehaviour {
 	// public variables
 	public int cameraIndex;
 	public GameObject cameraControls;
-	public bool toBeDestroyed;
 	public GameObject nextTrigger;
+	public bool toBeDestroyed;
+	public GameObject objectsThatNeedToBeSpawn;
+	public GameObject desactivate;
 
 	// private variables
 	private bool goBack;
@@ -20,6 +22,11 @@ public class cameraTriggers : MonoBehaviour {
 	// ---------------------------------------
 	void Start () {
 		goBack = false;
+
+		// If there's any objects that needs to be spawn
+		if (objectsThatNeedToBeSpawn != null) {
+			objectsThatNeedToBeSpawn.SetActive (false);
+		}
 	}
 
 	// ---------------------------------------
@@ -48,6 +55,16 @@ public class cameraTriggers : MonoBehaviour {
 			nextTrigger.SetActive (true);
 			// Destroy this object
 			Destroy (gameObject);
+		}
+
+		// If there's any objects that needs to be spawn
+		if (objectsThatNeedToBeSpawn != null) {
+			objectsThatNeedToBeSpawn.SetActive (true);
+		}
+
+		// If there's any objects that needs to be desactivate
+		if (desactivate != null) {
+			desactivate.SetActive (false);
 		}
 	}
 		
