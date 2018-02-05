@@ -53,6 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4518508546335126}
   - component: {fileID: 108171237970714056}
+  - component: {fileID: 114808529294606664}
   m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
@@ -92,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1276412379027288
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ GameObject:
   - component: {fileID: 33219206481216954}
   - component: {fileID: 23568505784857436}
   m_Layer: 9
-  m_Name: Antenna Green
+  m_Name: Antenna White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +144,7 @@ GameObject:
   - component: {fileID: 114191505849953676}
   m_Layer: 9
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +370,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247741973904330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.53, z: 0.45}
+  m_LocalPosition: {x: 0, y: 1.53, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4550858196438066}
@@ -409,7 +410,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835661903934362}
   m_LocalRotation: {x: 0.6061093, y: 0.05039407, z: 0.016833156, w: 0.79360485}
-  m_LocalPosition: {x: 0, y: -0.008, z: 0.281}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0.06}
   m_LocalScale: {x: 0.31101653, y: 0.12267896, z: 0.31101653}
   m_Children: []
   m_Father: {fileID: 4460054436298606}
@@ -962,7 +963,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.07586217, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.81
   m_Range: 1.84
   m_SpotAngle: 30
@@ -1040,7 +1041,7 @@ Light:
   m_SpotAngle: 62.2
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1094,6 +1095,22 @@ MonoBehaviour:
   m_EngineIdling: {fileID: 8300000, guid: 4932ab25b84dd7649b80af68a9660ddc, type: 3}
   m_EngineDriving: {fileID: 8300000, guid: d7ca9fb5aa30155449192b23d7fb3336, type: 3}
   m_PitchRange: 0.2
+--- !u!114 &114808529294606664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151046555794228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4a91617ae4bcc4ba82b746a86169df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 1
+  maxIntensity: 2
+  speed: 0.01
+  activate: 1
+  withSound: 0
 --- !u!198 &198609743238874300
 ParticleSystem:
   m_ObjectHideFlags: 1

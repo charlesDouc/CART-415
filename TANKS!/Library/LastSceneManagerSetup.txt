@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LightsCamera/Scenes/Projector.unity
+- path: Assets/LightsCamera/Scenes/Projection.unity
   isLoaded: 1
   isActive: 1

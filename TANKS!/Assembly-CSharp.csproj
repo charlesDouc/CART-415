@@ -52,16 +52,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-     <Compile Include="Assets\LightBreath_Control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
-     <Compile Include="Assets\LightsCamera\Scripts\Doors\NewBehaviourScript.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\gameMaster.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\BadLights.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\EnnemyTrigger_Controller.cs" />
+     <Compile Include="Assets\LightsCamera\Scripts\Lights\LightBreath_Control.cs" />
+     <Compile Include="Assets\LightsCamera\Scripts\Lights\LightSwitch_Controller.cs" />
+     <Compile Include="Assets\LightsCamera\Scripts\Other\bigSphere_Controller.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Tank\lightControl.cs" />
-     <Compile Include="Assets\LightSwitch_Controller.cs" />
      <Compile Include="Assets\Original\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Original\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Original\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

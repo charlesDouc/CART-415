@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameMaster : MonoBehaviour {
 
@@ -27,6 +28,11 @@ public class gameMaster : MonoBehaviour {
 	// Update is called once per frame
 	// ---------------------------------------
 	void Update () {
+
+		// Set the ESC key to quit the application
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit();
+		}
 		
 	}
 
@@ -34,4 +40,8 @@ public class gameMaster : MonoBehaviour {
 	// ---------------------------------------
 	// Methods
 	// ---------------------------------------
+	public void reload () {
+		// Reload the game (scene)
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+	}
 }
