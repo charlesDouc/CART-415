@@ -12924,6 +12924,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e48eac9b25a41de468b3fa58267a1950, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1919995532 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1593704826446206, guid: 78daef178d71c8343916a7290213400b,
+    type: 2}
+  m_PrefabInternal: {fileID: 173624373}
+--- !u!65 &1919995533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919995532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000002, y: 1.9956912, z: 7.5823936}
+  m_Center: {x: -0.00000002624038, y: -17.140623, z: 2.7911959}
+--- !u!65 &1919995534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919995532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000002, y: 2.021454, z: 7.5823936}
+  m_Center: {x: -0.00000025663965, y: -0.010708583, z: 2.7911937}
 --- !u!1 &1932445704
 GameObject:
   m_ObjectHideFlags: 0
@@ -13410,6 +13439,35 @@ Prefab:
     - {fileID: 114619052171771230, guid: 78daef178d71c8343916a7290213400b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78daef178d71c8343916a7290213400b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1987389866 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1593704826446206, guid: 78daef178d71c8343916a7290213400b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1987389865}
+--- !u!65 &1987389867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987389866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000088, y: 2.0627716, z: 7.5823956}
+  m_Center: {x: -0.0000046422556, y: -0.03138431, z: 2.791198}
+--- !u!65 &1987389868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987389866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000088, y: 2.144188, z: 7.5823956}
+  m_Center: {x: -0.00000091963443, y: -17.066383, z: 2.7912}
 --- !u!1 &1991578473
 GameObject:
   m_ObjectHideFlags: 0
