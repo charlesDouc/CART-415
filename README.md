@@ -10,7 +10,6 @@ Welcome to my TANKS! repository. Here's some link to naviguate easily in this Gi
 * [3D Models](https://github.com/charlesDouc/CART-415/tree/master/Models)
 
 
-[Charles Doucet](www.charlesdoucet.com)
 
 
 ## Credit
