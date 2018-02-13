@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
@@ -123,7 +122,6 @@
      <None Include="Assets\Original\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
      <None Include="Assets\Original\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
-     <None Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\ACES.cginc" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
@@ -241,6 +239,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/CharlesDoucet/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{81AB4F61-AD0C-4714-12EB-04BDD820B4FA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
