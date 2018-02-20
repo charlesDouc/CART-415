@@ -48,7 +48,8 @@ public class TankMovementSound : MonoBehaviour
     {	
 		// The axes names are based on player number.
         m_MovementAxisName = "Vertical" + m_PlayerNumber;
-        m_TurnAxisName = "Horizontal" + m_PlayerNumber;
+        // m_TurnAxisName = "Mouse X";
+		m_TurnAxisName = "Horizontal" + m_PlayerNumber;
 
 		// Store the original pitch of the audio source.
         m_OriginalPitch = m_MovementAudio.pitch;

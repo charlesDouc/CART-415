@@ -62,13 +62,15 @@ public class cameraSoundControllerImproved : MonoBehaviour {
 		// Create a new Quaternion variable with the new rotation data
 		Quaternion rotation = Quaternion.Euler (my_Y, my_X, 0);
 
-		/*	Not using the zoom feature
+		// Not using the zoom feature with the scroll wheel
 		distance = Mathf.Clamp (distance - Input.GetAxis ("Mouse_ScrollWheel") * 5, distanceMin, distanceMax);
-		*/
+
 
 		RaycastHit hit;
 		if (Physics.Linecast (thePlayer.position, transform.position, out hit)) {
 			distance -= hit.distance;
+		} else if (distance <= distanceMax) {
+			distance += 1f;
 		}
 
 		// Create a new variable for the negative distance
@@ -86,13 +88,12 @@ public class cameraSoundControllerImproved : MonoBehaviour {
 	// Methods
 	// ------------------------------------
 	public static float ClampAngle(float angle, float min, float max) {
-		if (angle < -360f) {
+		if (angle < -360f) 
 			angle += 360f;
-		}
-
-		if (angle > 360f) {
+		 
+		if (angle > 360f) 
 			angle -= 360f;
-		}
+		
 		return Mathf.Clamp (angle, min, max);
 	}
 
