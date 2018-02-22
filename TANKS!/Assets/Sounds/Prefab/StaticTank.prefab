@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 65060867358799144}
   m_Layer: 9
   m_Name: StaticTank
-  m_TagString: Player
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,9 +226,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509979857907586}
-  m_LocalRotation: {x: 0.30410278, y: 0.91743964, z: 0.20919569, w: -0.14853713}
-  m_LocalPosition: {x: -0.710718, y: 0.5163413, z: -4.134741}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.5717305, y: 0.4349582, z: 0.43288597, w: -0.5445599}
+  m_LocalPosition: {x: 0.009157272, y: 0.53365004, z: -0.000874706}
+  m_LocalScale: {x: 0.12633, y: 0.12632927, z: 0.12632962}
   m_Children:
   - {fileID: 4493597691230422}
   - {fileID: 4987902654319384}
@@ -237,7 +237,7 @@ Transform:
   - {fileID: 4880690253404758}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.630001, y: 14.7630005, z: 34.371002}
+  m_LocalEulerAnglesHint: {x: -87.79201, y: 146.498, z: 137.776}
 --- !u!4 &4396232566080228
 Transform:
   m_ObjectHideFlags: 1
@@ -360,7 +360,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c00012981b72a2745af83adceb13a2b5, type: 2}
+  - {fileID: 2100000, guid: a567d49b698accb42b448615fbef2df6, type: 2}
   - {fileID: 2100000, guid: 574c4e070e5dd0a40a02b979f582a836, type: 2}
   - {fileID: 2100000, guid: c4c5f95d06932564c8672b4bafeb1b28, type: 2}
   m_StaticBatchInfo:
@@ -396,7 +396,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c00012981b72a2745af83adceb13a2b5, type: 2}
+  - {fileID: 2100000, guid: a567d49b698accb42b448615fbef2df6, type: 2}
   - {fileID: 2100000, guid: c4c5f95d06932564c8672b4bafeb1b28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -465,7 +465,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c00012981b72a2745af83adceb13a2b5, type: 2}
+  - {fileID: 2100000, guid: a567d49b698accb42b448615fbef2df6, type: 2}
   - {fileID: 2100000, guid: c4c5f95d06932564c8672b4bafeb1b28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -500,7 +500,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c00012981b72a2745af83adceb13a2b5, type: 2}
+  - {fileID: 2100000, guid: a567d49b698accb42b448615fbef2df6, type: 2}
   - {fileID: 2100000, guid: c4c5f95d06932564c8672b4bafeb1b28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
