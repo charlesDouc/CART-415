@@ -116,7 +116,9 @@
      <Compile Include="Assets\Original\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\pivotController.cs" />
      <Compile Include="Assets\Sounds\Scripts\cameraSoundControllerImproved.cs" />
+     <Compile Include="Assets\Sounds\Scripts\EntityNotes.cs" />
      <Compile Include="Assets\Sounds\Scripts\TankMovementSound.cs" />
+     <Compile Include="Assets\Sounds\Scripts\TankNotes.cs" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\Fog.shader" />
