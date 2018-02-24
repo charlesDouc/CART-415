@@ -5,14 +5,13 @@ using UnityEngine;
 public class EntityNotes : MonoBehaviour {
 
 	// public variables
+	public AudioSource m_audio;
 	public Collider m_Trigger;
 	public GameObject m_Player;
 	[Header("Answers")]
 	public AudioClip[] m_randomNotes;
 	public AudioClip m_endNotes;
-
 	// private variables
-	private AudioSource m_audio;
 	private int[] m_playerSequence;
 	private int[] m_endSequence;
 
