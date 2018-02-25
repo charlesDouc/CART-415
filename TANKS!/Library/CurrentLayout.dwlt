@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -352,9 +352,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -292.64465, y: -1138.8596, z: -1224.597}
+    m_Target: {x: -329.6079, y: 1373.6426, z: -331.08105}
     speed: 2
-    m_Value: {x: -292.64465, y: -1138.8596, z: -1224.597}
+    m_Value: {x: -329.6079, y: 1373.6426, z: -331.08105}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -378,13 +378,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.01957561, y: 0.93618894, z: -0.34695396, w: 0.052820764}
+    m_Target: {x: -0.073946156, y: 0.92461073, z: -0.2360031, w: -0.28970596}
     speed: 2
-    m_Value: {x: 0.01957561, y: 0.93618894, z: -0.34695396, w: 0.052820764}
+    m_Value: {x: -0.073946156, y: 0.92461073, z: -0.2360031, w: -0.28970596}
   m_Size:
-    m_Target: 2628.5273
+    m_Target: 9498.463
     speed: 2
-    m_Value: 2628.5273
+    m_Value: 9498.463
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -505,19 +505,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Plugins/Standard Assets/Environment/Water/Water/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Plugins/Standard Assets/Environment/Water/Water/Prefabs
+  - Assets
   m_LastFoldersGridSize: 65
   m_LastProjectPath: C:\Users\Charles\Documents\GitHub\CART-415\TANKS!
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 157}
-    m_SelectedIDs: 042f0000
-    m_LastClickedID: 12036
-    m_ExpandedIDs: 000000001e29000056290000342a0000a42b0000be2b0000242d00006a2d0000942d0000ea2e0000f02e0000002f00009c3000009e300000a0300000a2300000a4300000a6300000a8300000aa300000ac300000ae300000b0300000b2300000b4300000ffffff7f
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 1e290000
+    m_LastClickedID: 10526
+    m_ExpandedIDs: 000000001e29000070290000b62a00007e2b0000a8300000883800008a3d0000f83d0000303e00002e4400002e4a0000604d0000f24e000056520000745200000e5300005c5600005e56000060560000625600006456000066560000685600006a560000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e29000056290000342a0000a42b0000be2b0000242d00006a2d0000942d0000ea2e0000f02e0000002f00009c3000009e300000a0300000a2300000a4300000a6300000a8300000aa300000ac300000ae300000b0300000b2300000b4300000
+    m_ExpandedIDs: 000000001e29000070290000b62a00007e2b0000a8300000883800008a3d0000f83d0000303e00002e4400002e4a0000604d0000f24e000056520000745200000e5300005c5600005e56000060560000625600006456000066560000685600006a560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,9 +685,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca2a0000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_ExpandedIDs: 9efbffff00000000fe540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
