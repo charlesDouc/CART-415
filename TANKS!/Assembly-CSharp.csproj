@@ -118,6 +118,7 @@
      <Compile Include="Assets\Sounds\Scripts\cameraSoundControllerImproved.cs" />
      <Compile Include="Assets\Sounds\Scripts\EntityMouvement.cs" />
      <Compile Include="Assets\Sounds\Scripts\EntityNotes.cs" />
+     <Compile Include="Assets\Sounds\Scripts\EntityRingRotation.cs" />
      <Compile Include="Assets\Sounds\Scripts\TankMovementSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\TankNotes.cs" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\DepthOfField.shader" />

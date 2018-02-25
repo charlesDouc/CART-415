@@ -85,7 +85,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4347969511855604}
-  - component: {fileID: 65060867358799144}
   m_Layer: 9
   m_Name: StaticTank
   m_TagString: Entity
@@ -556,18 +555,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981222294460348}
   m_Mesh: {fileID: 4300000, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
---- !u!65 &65060867358799144
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1509979857907586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.7, z: 1.6}
-  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!108 &108516183067539100
 Light:
   m_ObjectHideFlags: 1
