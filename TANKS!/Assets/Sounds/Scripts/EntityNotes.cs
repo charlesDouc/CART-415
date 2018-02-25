@@ -50,6 +50,11 @@ public class EntityNotes : MonoBehaviour {
 
 
 
+	public void resetListenState () {
+		// Reset the collider so the player can interact again with the player
+		m_Trigger.enabled = true;
+	}
+		
 
 
 	public void listen(int[] receiving) {
@@ -65,6 +70,7 @@ public class EntityNotes : MonoBehaviour {
 		
 	}
 		
+
 
 
 
@@ -87,6 +93,11 @@ public class EntityNotes : MonoBehaviour {
 			m_audio.Play ();
 			// Print what the entity is answering
 			Debug.Log ("Playing a random sequence ( " + randomIndex + " )");
+
+			// Start fleeing to a new location on the map after some time
+			yield return new WaitForSeconds (6);
+			EntityMouvement mouvementScript = gameObject.GetComponent<EntityMouvement> ();
+			mouvementScript.startMoving ();
 		}
 	}
 

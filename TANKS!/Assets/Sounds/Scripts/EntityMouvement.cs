@@ -13,6 +13,7 @@ public class EntityMouvement : MonoBehaviour {
 	private int m_posIndex = 0;
 	private bool transit = false;
 	private int newIndex;
+	private bool landing = false;
 
 	// ------------------------------------
 	// Use this for initialization
@@ -37,22 +38,17 @@ public class EntityMouvement : MonoBehaviour {
 	// Update is called once per frame
 	// ------------------------------------
 	void Update () {
-		
-		// Set all Positions
+		// Update all positions (for the height)
 		m_positions = new Vector3[7];
 		m_positions [0] = new Vector3 (0, m_commonHeight, 95f);
 		m_positions [1] = new Vector3 (-700, m_commonHeight, 560f);
 		m_positions [2] = new Vector3 (800, m_commonHeight, 360f);
 		m_positions [3] = new Vector3 (500, m_commonHeight, -180f);
 		m_positions [4] = new Vector3 (715, m_commonHeight, -600);
-		m_positions [5] = new Vector3 (-500, m_commonHeight, -180f);
+		m_positions [5] = new Vector3 (-500, m_commonHeight, -500f);
 		m_positions [6] = new Vector3 (-710, m_commonHeight, -170f);
-		
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			transit = true;
-			newIndex = settingDestination (m_posIndex);
-		}
 
+		// If the function start moving is activated
 		if (transit) {
 			flee (newIndex);
 		}
@@ -61,16 +57,53 @@ public class EntityMouvement : MonoBehaviour {
 	// ------------------------------------
 	// Methods
 	// ------------------------------------
-	public void flee (int nextPos) {
-		Debug.Log ("working?");
+	private void flee (int nextPos) {
+		// Get the value of current position
+		Vector3 currentPos = transform.position;
 
-		if (m_commonHeight < 350f) {
-			m_commonHeight += 5f;
+		// Variable to calculate a speed for mouvement
+		float step = m_speed * Time.deltaTime;
+
+		// Trow the object in the air first
+		if (m_commonHeight < 205f	&& 	!landing) {
+			m_commonHeight += step;
+			gameObject.transform.position = Vector3.MoveTowards (transform.position, m_positions [m_posIndex], step);
+		// Once the object is in the air, move it to the next destination
+		} else if (currentPos.x != m_positions [newIndex].x) {
+			gameObject.transform.position = Vector3.MoveTowards (transform.position, m_positions [newIndex], step);
+		// Once at new position start the landing of the object
 		} else {
-			float step = m_speed * Time.deltaTime;
-			gameObject.transform.position = Vector3.MoveTowards (transform.position, m_positions[m_posIndex], step);
+			landing = true;
+		}
+
+		// Land the object to the new location 
+		if (m_commonHeight > 40f	&& 	landing) {
+			m_commonHeight -= step;
+			gameObject.transform.position = Vector3.MoveTowards (transform.position, m_positions [newIndex], step);
+		// Once it arrived, disable the flee function, and reset the listen method
+		} else if (landing) {
+			Debug.Log ("ARRIVED");
+			// Change the value of the current index
+			m_posIndex = newIndex;
+			landing = false;
+			transit = false;
+
+			// Reset the listen state of the entity 
+			EntityNotes notesScript = gameObject.GetComponent<EntityNotes> ();
+			notesScript.resetListenState ();
 		}
 	}
+
+
+
+
+	public void startMoving () {
+		// Start the flee function in Update
+		transit = true;
+		// Set the new destination
+		newIndex = settingDestination (m_posIndex);
+	}
+
 
 
 

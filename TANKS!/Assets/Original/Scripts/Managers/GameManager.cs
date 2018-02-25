@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -79,7 +79,8 @@ public class GameManager : MonoBehaviour
 		// This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
 		if (m_GameWinner != null) {
 			// If there is a game winner, restart the level.
-			Application.LoadLevel (Application.loadedLevel);
+			// Application.LoadLevel (Application.loadedLevel);
+			SceneManager.LoadScene ("main");
 		}
 		else {
 			// If there isn't a winner yet, restart this coroutine so the loop continues.
