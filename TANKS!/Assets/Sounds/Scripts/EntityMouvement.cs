@@ -27,8 +27,8 @@ public class EntityMouvement : MonoBehaviour {
 		m_positions [2] = new Vector3 (800, m_commonHeight, 360f);
 		m_positions [3] = new Vector3 (500, m_commonHeight, -180f);
 		m_positions [4] = new Vector3 (715, m_commonHeight, -600);
-		m_positions [5] = new Vector3 (-500, m_commonHeight, -180f);
-		m_positions [6] = new Vector3 (-710, m_commonHeight, -170f);
+		m_positions [5] = new Vector3 (-695f, m_commonHeight, -150f);
+		m_positions [6] = new Vector3 (-690f, m_commonHeight, -700f);
 
 		// Set inital position
 		gameObject.transform.position = m_positions[0];
@@ -45,8 +45,8 @@ public class EntityMouvement : MonoBehaviour {
 		m_positions [2] = new Vector3 (800, m_commonHeight, 360f);
 		m_positions [3] = new Vector3 (500, m_commonHeight, -180f);
 		m_positions [4] = new Vector3 (715, m_commonHeight, -600);
-		m_positions [5] = new Vector3 (-500, m_commonHeight, -500f);
-		m_positions [6] = new Vector3 (-710, m_commonHeight, -170f);
+		m_positions [5] = new Vector3 (-695f, m_commonHeight, -150f);
+		m_positions [6] = new Vector3 (-690f, m_commonHeight, -700f);
 
 		// If the function start moving is activated
 		if (transit) {
