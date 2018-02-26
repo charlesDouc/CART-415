@@ -8,6 +8,7 @@ public class TankNotes : MonoBehaviour {
 	public AudioSource m_audio;
 	public GameObject theEnity;
 	public AudioClip[] m_notes;
+	public bool inTheEndScene = false;
 
 	// private variables
 	private int m_sequenceIndex = 0;
@@ -23,6 +24,7 @@ public class TankNotes : MonoBehaviour {
 
 		// Don't start the conversation yet
 		startDialogue = false;
+
 	}
 
 	// ------------------------------------
@@ -153,13 +155,25 @@ public class TankNotes : MonoBehaviour {
 				+ m_recordingNote [2] + m_recordingNote [3]
 				+ m_recordingNote [4] + m_recordingNote [5]);
 
-			// Translate data to the entity
-			EntityNotes notesScript = theEnity.GetComponent<EntityNotes>();
-			notesScript.listen (m_recordingNote);
+			if (!inTheEndScene) {
+				// Translate data to the entity
+				EntityNotes notesScript = theEnity.GetComponent<EntityNotes>();
+				notesScript.listen (m_recordingNote);
+			} else {
+				// Translate data to the entity
+				EntityNotes_end notesScript = theEnity.GetComponent<EntityNotes_end>();
+				notesScript.listen (m_recordingNote);
+			}
+
 
 			// End the dialogue
 			startDialogue = false;
 		}
 	}
 
+
+	public void turnVolumeDown() {
+		float value = 30f;
+		m_audio.volume -= value;
+	}
 }

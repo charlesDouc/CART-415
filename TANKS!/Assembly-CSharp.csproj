@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\checkpointController.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
@@ -116,7 +117,9 @@
      <Compile Include="Assets\Original\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Sounds\Scripts\Camera\cameraSoundControllerImproved.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityMouvement.cs" />
+     <Compile Include="Assets\Sounds\Scripts\Entity\EntityMovement_end.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityNotes.cs" />
+     <Compile Include="Assets\Sounds\Scripts\Entity\EntityNotes_end.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityRingRotation.cs" />
      <Compile Include="Assets\Sounds\Scripts\GameMasterSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\waterCollision.cs" />
