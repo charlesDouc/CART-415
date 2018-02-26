@@ -81,9 +81,9 @@ public class TankMovementSound : MonoBehaviour
 			gameObject.transform.eulerAngles = resettingRotation;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Backspace) && m_allowReset) {
-			resettingPlayer (m_originalPos);
-		}
+		//if (Input.GetKeyDown (KeyCode.Backspace) && m_allowReset) {
+		//	resettingPlayer (m_originalPos);
+		//}
 
 
     }

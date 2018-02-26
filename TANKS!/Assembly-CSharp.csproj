@@ -115,6 +115,7 @@
      <Compile Include="Assets\Original\Scripts\UI\UIDirectionControl.cs" />
      <Compile Include="Assets\Original\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Sounds\Scripts\Camera\cameraSoundControllerImproved.cs" />
+     <Compile Include="Assets\Sounds\Scripts\Camera\moveCameraTilt.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityMouvement.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityMovement_end.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityNotes.cs" />
@@ -122,6 +123,7 @@
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityRingRotation.cs" />
      <Compile Include="Assets\Sounds\Scripts\GameMasterSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\checkpointController.cs" />
+     <Compile Include="Assets\Sounds\Scripts\Other\seeObjectController.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\waterCollision.cs" />
      <Compile Include="Assets\Sounds\Scripts\Player\TankMovementSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\Player\TankNotes.cs" />

@@ -21,7 +21,8 @@ public class GameMasterSound : MonoBehaviour {
 	// Use this for initialization
 	// --------------------------------------
 	void Start () {
-		
+		// Set the cursor invisible
+		Cursor.visible = false;
 	}
 
 	// --------------------------------------
@@ -34,10 +35,17 @@ public class GameMasterSound : MonoBehaviour {
 		if (fadeMusic && musicVolume > 0) {
 			// silence slowly the music
 			musicVolume -= 0.01f;
+			m_music.volume = musicVolume;
 		}
 
-		m_music.volume = musicVolume;
-		
+		// Quit the app
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+			
+		if (Input.GetKeyDown(KeyCode.Backspace)) {
+			loadScene(0);
+		}
 	}
 
 	// --------------------------------------

@@ -12,12 +12,19 @@ public class EntityNotes : MonoBehaviour {
 	public GameObject m_theGM;
 	[Header("Answers")]
 	public AudioClip[] m_randomNotes;
+	public AudioClip[] m_premadeNotes;
 	public AudioClip m_entityListen;
 	public AudioClip m_endNotes;
 	public AudioClip m_lastSequenceNotes;
 	// private variables
 	private int[] m_playerSequence;
 	private int[] m_endSequence;
+	private int[] m_clairLuneSequence;
+	private int[] m_zeldaSequence;
+	private int[] m_whentSaintsSequence;
+	private int[] m_happyBirthdaySequence;
+	private int[] m_starWarsSequence;
+	private int[] m_marioSequence;
 	private bool m_theEnd;
 
 	// ------------------------------------
@@ -33,6 +40,12 @@ public class EntityNotes : MonoBehaviour {
 		m_playerSequence = new int[6];
 		// Set the premade answers
 		m_endSequence = new int[] {7, 8, 6, 4, 3, 1}; 
+		m_clairLuneSequence = new int[] {5, 5, 5, 6, 7, 6};		// clair de la lune
+		m_zeldaSequence = new int[] {4, 6, 7, 4, 6, 7};			// zelda sariah's song
+		m_whentSaintsSequence = new int[] {1, 3, 4, 5, 1, 3};	// Oh when the Saints
+		m_happyBirthdaySequence = new int[] {1, 1, 2, 1, 4, 3}; // Happy birthday
+		m_starWarsSequence = new int[] {6, 6, 6, 4, 8, 6};		// Star Wars
+		m_marioSequence = new int[] {6, 6, 6, 4, 6, 8};			// Super Mario 
 	}
 
 	// ------------------------------------
@@ -102,9 +115,54 @@ public class EntityNotes : MonoBehaviour {
 			yield return new WaitForSeconds (6);
 			EntityMouvement mouvementScript = gameObject.GetComponent<EntityMouvement> ();
 			mouvementScript.goToEnd ();
+		
+		// ------ PREMADES ----------
+		} else if (analyse(m_clairLuneSequence)) {
+			// Start au clair de la lune
+			yield return new WaitForSeconds (1);
+			playPremade(0);
+			yield return new WaitForSeconds (6);
+			resetListenState();
+		
+		} else if (analyse(m_zeldaSequence)) {
+			// Start zelda
+			yield return new WaitForSeconds (1);
+			playPremade(1);
+			yield return new WaitForSeconds (10);
+			resetListenState();
+		
+		} else if (analyse(m_whentSaintsSequence)) {
+			// Start when the saints
+			yield return new WaitForSeconds (1);
+			playPremade(2);
+			yield return new WaitForSeconds (10);
+			resetListenState();
+		
+		} else if (analyse(m_happyBirthdaySequence)) {
+			// Start happy birthday
+			yield return new WaitForSeconds (1);
+			playPremade(3);
+			yield return new WaitForSeconds (6);
+			resetListenState();
+
+		} else if (analyse(m_starWarsSequence)) {
+			// Start star wars
+			yield return new WaitForSeconds (1);
+			playPremade(4);
+			yield return new WaitForSeconds (10);
+			resetListenState();
+
+		} else if (analyse(m_marioSequence)) {
+			// Start mario
+			yield return new WaitForSeconds (1);
+			playPremade(5);
+			yield return new WaitForSeconds (6);
+			resetListenState();
 
 
-		} else {										// If no premade were found. Random noises.
+
+		// If no premade were found. Random noises.
+		} else  {
 			// Wait a bit before answering
 			yield return new WaitForSeconds (2);
 			// Get a random number and play the notes linked to the index
@@ -160,6 +218,12 @@ public class EntityNotes : MonoBehaviour {
 		theGMScript.loadScene(1);
 	}
 
+
+
+	void playPremade (int premadeIndex) {
+		m_audio.clip = m_premadeNotes[premadeIndex];
+		m_audio.Play();
+	}
 
 
 
