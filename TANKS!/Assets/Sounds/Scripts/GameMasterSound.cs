@@ -8,11 +8,14 @@ public class GameMasterSound : MonoBehaviour {
 	// public variables
 	public Texture2D fadeOutTexture;
 	public float fadeSpeed = 0.01f;
+	public AudioSource m_music;
 
 	//private variables
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
 	private int fadeDir = -1;
+	private float musicVolume = 1.0f;
+	private bool fadeMusic = false;
 
 	// --------------------------------------
 	// Use this for initialization
@@ -25,6 +28,15 @@ public class GameMasterSound : MonoBehaviour {
 	// Update is called once per frame
 	// --------------------------------------
 	void Update () {
+
+
+
+		if (fadeMusic && musicVolume > 0) {
+			// silence slowly the music
+			musicVolume -= 0.01f;
+		}
+
+		m_music.volume = musicVolume;
 		
 	}
 
@@ -52,5 +64,10 @@ public class GameMasterSound : MonoBehaviour {
 	// Fade in/out method
 	public void BeginFade (int direction) {
 		fadeDir = direction;
+	}
+
+
+	public void noMusic () {
+		fadeMusic = true;
 	}
 }

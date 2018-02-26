@@ -6,6 +6,7 @@ public class EntityNotes_end : MonoBehaviour {
 
 	// public variables
 	public AudioSource m_audio;
+	public AudioSource m_audioSecondChannel;
 	public Collider m_Trigger;
 	public GameObject m_Player;
 	public GameObject m_theGM;
@@ -118,8 +119,9 @@ public class EntityNotes_end : MonoBehaviour {
 	public IEnumerator theEnd() {
 		m_audio.clip = m_lastWord;
 		m_audio.Play();
-		yield return new WaitForSeconds(10);
 		GameMasterSound theGMScript = m_theGM.GetComponent<GameMasterSound>();
+		theGMScript.noMusic();
+		yield return new WaitForSeconds(27);
 		theGMScript.BeginFade(1);
 		yield return new WaitForSeconds(5);
 		theGMScript.loadScene(0);
@@ -128,8 +130,8 @@ public class EntityNotes_end : MonoBehaviour {
 
 
 	public void speakAtCheckpoint(int index) {
-		m_audio.clip = m_payRespect[index];
-		m_audio.Play();
+		m_audioSecondChannel.clip = m_payRespect[index];
+		m_audioSecondChannel.Play();
 	}
 
 }

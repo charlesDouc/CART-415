@@ -9,6 +9,7 @@ public class TankMovementSound : MonoBehaviour
     public AudioClip m_EngineIdling;       
     public AudioClip m_EngineDriving;      
     public float m_PitchRange = 0.2f;
+	public bool m_allowReset = true;
 
     
     private string m_MovementAxisName;     
@@ -70,7 +71,7 @@ public class TankMovementSound : MonoBehaviour
 
 		EngineAudio ();
 
-		if (Input.GetKeyDown (KeyCode.R)) {
+		if (Input.GetKeyDown (KeyCode.R) && m_allowReset) {
 			Vector3 currentposition = gameObject.transform.position;
 			Vector3 resettingRotation = new Vector3 (0, 0, 0);
 			float pushingY = transform.position.y + 10f;
@@ -80,7 +81,7 @@ public class TankMovementSound : MonoBehaviour
 			gameObject.transform.eulerAngles = resettingRotation;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Backspace)) {
+		if (Input.GetKeyDown (KeyCode.Backspace) && m_allowReset) {
 			resettingPlayer (m_originalPos);
 		}
 

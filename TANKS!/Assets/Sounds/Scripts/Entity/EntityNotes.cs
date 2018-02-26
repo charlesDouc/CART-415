@@ -12,6 +12,7 @@ public class EntityNotes : MonoBehaviour {
 	public GameObject m_theGM;
 	[Header("Answers")]
 	public AudioClip[] m_randomNotes;
+	public AudioClip m_entityListen;
 	public AudioClip m_endNotes;
 	public AudioClip m_lastSequenceNotes;
 	// private variables
@@ -52,6 +53,9 @@ public class EntityNotes : MonoBehaviour {
 			playerScript.startTalking ();
 			// Disable the trigger
 			m_Trigger.enabled = false;
+			// Give feedback to the player that its listening
+			m_audio.clip = m_entityListen;
+			m_audio.Play();
 		// If it's the end
 		} else if (m_theEnd) {
 			// Play last sequence
@@ -149,11 +153,11 @@ public class EntityNotes : MonoBehaviour {
 	IEnumerator lastSequence() {
 		m_audio.clip = m_lastSequenceNotes;
 		m_audio.Play();
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(25);
 		GameMasterSound theGMScript = m_theGM.GetComponent<GameMasterSound>();
 		theGMScript.BeginFade(1);
 		yield return new WaitForSeconds(3);
-		theGMScript.loadScene(0);
+		theGMScript.loadScene(1);
 	}
 
 

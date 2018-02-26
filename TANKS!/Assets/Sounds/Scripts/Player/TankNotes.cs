@@ -14,6 +14,7 @@ public class TankNotes : MonoBehaviour {
 	private int m_sequenceIndex = 0;
 	private int[] m_recordingNote;
 	private bool startDialogue;
+	private bool notSilenced = true;
 
 	// ------------------------------------
 	// Use this for initialization
@@ -33,7 +34,7 @@ public class TankNotes : MonoBehaviour {
 	void Update () {
 
 		// If user press down 1 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+		if (Input.GetKeyDown (KeyCode.Alpha1) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [0];
 			m_audio.Play ();
@@ -46,7 +47,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 2 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+		if (Input.GetKeyDown (KeyCode.Alpha2) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [1];
 			m_audio.Play ();
@@ -58,7 +59,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 3 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+		if (Input.GetKeyDown (KeyCode.Alpha3) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [2];
 			m_audio.Play ();
@@ -70,7 +71,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 4 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha4)) {
+		if (Input.GetKeyDown (KeyCode.Alpha4) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [3];
 			m_audio.Play ();
@@ -82,7 +83,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 5 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha5)) {
+		if (Input.GetKeyDown (KeyCode.Alpha5) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [4];
 			m_audio.Play ();
@@ -94,7 +95,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 6 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha6)) {
+		if (Input.GetKeyDown (KeyCode.Alpha6) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [5];
 			m_audio.Play ();
@@ -106,7 +107,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 7 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha7)) {
+		if (Input.GetKeyDown (KeyCode.Alpha7) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [6];
 			m_audio.Play ();
@@ -118,7 +119,7 @@ public class TankNotes : MonoBehaviour {
 		}
 
 		// If user press down 8 on the number row ----------
-		if (Input.GetKeyDown (KeyCode.Alpha8)) {
+		if (Input.GetKeyDown (KeyCode.Alpha8) && notSilenced) {
 			// Play a note
 			m_audio.clip = m_notes [7];
 			m_audio.Play ();
@@ -172,8 +173,12 @@ public class TankNotes : MonoBehaviour {
 	}
 
 
-	public void turnVolumeDown() {
-		float value = 30f;
-		m_audio.volume -= value;
+	public void turnVolumeDown(bool silence) {
+		if (silence) {
+			notSilenced = false;
+		} else {
+			float value = 0.25f;
+			m_audio.volume -= value;
+		}
 	}
 }
