@@ -7,13 +7,17 @@ public class EntityNotes : MonoBehaviour {
 	// public variables
 	public AudioSource m_audio;
 	public Collider m_Trigger;
+	public Collider m_endTrigger;
 	public GameObject m_Player;
+	public GameObject m_theGM;
 	[Header("Answers")]
 	public AudioClip[] m_randomNotes;
 	public AudioClip m_endNotes;
+	public AudioClip m_lastSequenceNotes;
 	// private variables
 	private int[] m_playerSequence;
 	private int[] m_endSequence;
+	private bool m_theEnd;
 
 	// ------------------------------------
 	// Use this for initialization
@@ -21,10 +25,13 @@ public class EntityNotes : MonoBehaviour {
 	void Start () {
 		m_audio = GetComponent<AudioSource> ();
 
+		// Desactivate end trigeer
+		m_endTrigger.enabled = false;
+		m_theEnd = false;
 		// Set the arrays
 		m_playerSequence = new int[6];
 		// Set the premade answers
-		m_endSequence = new int[] {1, 3, 5, 6, 2, 1}; 
+		m_endSequence = new int[] {7, 8, 6, 4, 3, 1}; 
 	}
 
 	// ------------------------------------
@@ -39,12 +46,16 @@ public class EntityNotes : MonoBehaviour {
 	// ------------------------------------
 	void OnTriggerEnter (Collider target) {
 		// Check if the player is entering the trigger of the entity
-		if (target.gameObject.tag == "Player") {
+		if (target.gameObject.tag == "Player"	&& !m_theEnd) {
 			// Start the dialogue with the player
 			TankNotes playerScript = m_Player.GetComponent<TankNotes>();
 			playerScript.startTalking ();
 			// Disable the trigger
 			m_Trigger.enabled = false;
+		// If it's the end
+		} else if (m_theEnd) {
+			// Play last sequence
+			StartCoroutine(lastSequence());
 		}
 	}
 
@@ -83,6 +94,11 @@ public class EntityNotes : MonoBehaviour {
 			m_audio.Play ();
 			// Print what the entity is answering
 			Debug.Log ("Playing Ending");
+			// Start fleeing to the end location on the map after some time
+			yield return new WaitForSeconds (6);
+			EntityMouvement mouvementScript = gameObject.GetComponent<EntityMouvement> ();
+			mouvementScript.goToEnd ();
+
 
 		} else {										// If no premade were found. Random noises.
 			// Wait a bit before answering
@@ -118,6 +134,28 @@ public class EntityNotes : MonoBehaviour {
 		// Return the result of the analyse
 		return same;
 	}
+
+
+
+
+	public void startEnding() {
+		// Open the trigger for the end sequence
+		m_theEnd = true;
+		m_endTrigger.enabled = true;
+	}
+
+
+
+	IEnumerator lastSequence() {
+		m_audio.clip = m_lastSequenceNotes;
+		m_audio.Play();
+		yield return new WaitForSeconds(5);
+		GameMasterSound theGMScript = m_theGM.GetComponent<GameMasterSound>();
+		theGMScript.BeginFade(1);
+		yield return new WaitForSeconds(3);
+		theGMScript.loadScene(0);
+	}
+
 
 
 

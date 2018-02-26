@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/LightsCamera/Scenes/Projector.unity
+  - enabled: 0
+    path: Assets/LightsCamera/Scenes/Projection.unity
     guid: 9efe918ddd2a91f4090b2f83b1d0824b
+  - enabled: 1
+    path: Assets/Sounds/Scenes/Dialogue.unity
+    guid: 94172ab306128a545b9d9c1f3fa1a29b

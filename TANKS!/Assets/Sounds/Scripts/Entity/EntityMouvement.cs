@@ -9,7 +9,7 @@ public class EntityMouvement : MonoBehaviour {
 
 	// private variables
 	private Vector3[] m_positions;
-	private float m_commonHeight = 40f;
+	private float m_commonHeight = 50f;
 	private int m_posIndex = 0;
 	private bool transit = false;
 	private int newIndex;
@@ -77,7 +77,7 @@ public class EntityMouvement : MonoBehaviour {
 		}
 
 		// Land the object to the new location 
-		if (m_commonHeight > 40f	&& 	landing) {
+		if (m_commonHeight > 50f	&& 	landing) {
 			m_commonHeight -= step;
 			gameObject.transform.position = Vector3.MoveTowards (transform.position, m_positions [newIndex], step);
 		// Once it arrived, disable the flee function, and reset the listen method
@@ -88,9 +88,17 @@ public class EntityMouvement : MonoBehaviour {
 			landing = false;
 			transit = false;
 
+			if (m_posIndex != 6) {
+				// Reset the listen state of the entity 
+				EntityNotes notesScript = gameObject.GetComponent<EntityNotes> ();
+				notesScript.resetListenState ();
+			}
+		}
+
+		if (m_posIndex == 6) {
 			// Reset the listen state of the entity 
 			EntityNotes notesScript = gameObject.GetComponent<EntityNotes> ();
-			notesScript.resetListenState ();
+			notesScript.startEnding ();
 		}
 	}
 
@@ -102,6 +110,14 @@ public class EntityMouvement : MonoBehaviour {
 		transit = true;
 		// Set the new destination
 		newIndex = settingDestination (m_posIndex);
+	}
+
+
+	public void goToEnd () {
+		// Start the flee function in Update
+		transit = true;
+		// Set the new destination
+		newIndex = 6;
 	}
 
 
