@@ -19,9 +19,18 @@ Here's all credit from outside assets I used in my projects.
 #### Commun
 
 * **[Post Processing Stack](https://assetstore.unity.com/packages/essentials/post-processing-stack-83912)** by Unity Technologies
+* **[HX Volumetric Lighting](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/hx-volumetric-lighting-67665)** by Hitbox Team
+* **[Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)** by Unity Technologies
 
 #### Projection
 
 * **[Ambiant sound](https://freesound.org/people/OnlyTheGhosts/sounds/251478/)** by OnlyTheGhosts
 * **[Light switch](https://freesound.org/people/Alvinwhatup2/sounds/131599/)** by Alvinwhatup2
 * **[Red light sound](https://freesound.org/people/waveplay/sounds/187514/)** by waveplay
+
+#### Dialogue
+
+* **[Snow VFX](https://assetstore.unity.com/packages/vfx/particles/environment/snow-vfx-58508)** by Luke Peek
+* **[Low Poly Rocks Pack](https://assetstore.unity.com/packages/3d/environments/low-poly-rocks-pack-70164)** by LMHPOLY 
+* End scene music : **Piano Sonata No. 14 In C-Sharp Minor, *Moonlight Sonata* Adagio Sostenuto** performed by London Philharmonic Orchestra.
+
