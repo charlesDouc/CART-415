@@ -5,7 +5,6 @@ Hello there!
 Welcome to my TANKS! repository. Here's some link to naviguate easily in this Git:
 
 * [Process Journal](https://github.com/charlesDouc/CART-415/wiki)
-* [Current Builds](https://github.com/charlesDouc/CART-415/tree/master/Builds)
 * [Unity Source Files](https://github.com/charlesDouc/CART-415/tree/master/TANKS!)
 * [3D Models](https://github.com/charlesDouc/CART-415/tree/master/Models)
 
