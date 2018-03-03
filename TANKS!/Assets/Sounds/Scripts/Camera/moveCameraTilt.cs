@@ -11,7 +11,8 @@ public class moveCameraTilt : MonoBehaviour {
 	public GameObject m_Pivot;
 
 	// private variables
-	private float m_TiltAngle;
+	private float m_TiltAngleY;
+	private float m_TiltAngleX;
 	private Vector3 m_PivotEulers;
 	private Quaternion m_PivotTargetRot;
 	private float m_TurnSmoothing = 0.0f; 
@@ -40,16 +41,18 @@ public class moveCameraTilt : MonoBehaviour {
 
 		// Read the user input
 		float y = Input.GetAxis("Mouse Y");
+		float x = Input.GetAxis("Mouse X");
 
 
 		// on platforms with a mouse, we adjust the current angle based on Y mouse input and turn speed
-		m_TiltAngle -= y*m_TurnSpeed;
+		m_TiltAngleY -= y * m_TurnSpeed;
+		m_TiltAngleX += x * m_TurnSpeed;
 		// and make sure the new value is within the tilt range
-		m_TiltAngle = Mathf.Clamp(m_TiltAngle, -m_TiltMin, m_TiltMax);
-
+		m_TiltAngleY = Mathf.Clamp(m_TiltAngleY, -m_TiltMin, m_TiltMax);
+		m_TiltAngleX = Mathf.Clamp(m_TiltAngleX, -m_TiltMin, m_TiltMax);
 
 		// Tilt input around X is applied to the pivot (the child of this object)
-		m_PivotTargetRot = Quaternion.Euler(m_TiltAngle, 0 , 0);
+		m_PivotTargetRot = Quaternion.Euler(m_TiltAngleY, m_TiltAngleX , 0);
 
 		if (m_TurnSmoothing > 0)
 		{

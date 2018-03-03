@@ -177,7 +177,7 @@ public class TankNotes : MonoBehaviour {
 		if (silence) {
 			notSilenced = false;
 		} else {
-			float value = 0.25f;
+			float value = 0.05f;
 			m_audio.volume -= value;
 		}
 	}

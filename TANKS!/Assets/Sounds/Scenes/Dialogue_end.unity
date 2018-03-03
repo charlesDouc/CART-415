@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0041744416, g: 0.0043855947, b: 0.0048721256, a: 1}
+  m_IndirectSpecularColor: {r: 0.004174442, g: 0.004385595, b: 0.004872128, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.708
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -566,7 +566,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0.835
+      value: 0.407
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1897,6 +1897,16 @@ Prefab:
         type: 2}
       propertyPath: Priority
       value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 82956664899925028, guid: b037895a22d534c4aaa9d0c4bbf162b3,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 82956664899925028, guid: b037895a22d534c4aaa9d0c4bbf162b3,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.576
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114531578277382986, guid: b037895a22d534c4aaa9d0c4bbf162b3, type: 2}
@@ -6800,7 +6810,12 @@ Prefab:
     - target: {fileID: 82129897306027986, guid: 46483324eba9243f688758c2f06800c8,
         type: 2}
       propertyPath: m_Volume
-      value: 0.75
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 82129897306027986, guid: 46483324eba9243f688758c2f06800c8,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46483324eba9243f688758c2f06800c8, type: 2}

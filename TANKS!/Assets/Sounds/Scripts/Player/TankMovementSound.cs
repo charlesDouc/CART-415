@@ -51,7 +51,8 @@ public class TankMovementSound : MonoBehaviour
 		// The axes names are based on player number.
         m_MovementAxisName = "Vertical" + m_PlayerNumber;
         // m_TurnAxisName = "Mouse X";
-		m_TurnAxisName = "Horizontal" + m_PlayerNumber;
+		 m_TurnAxisName = "Horizontal" + m_PlayerNumber;
+		// m_TurnAxisName = "Mouse X";
 
 		// Store the original pitch of the audio source.
         m_OriginalPitch = m_MovementAudio.pitch;
@@ -161,5 +162,9 @@ public class TankMovementSound : MonoBehaviour
 		gameObject.transform.position = resetPosition;
 		gameObject.transform.eulerAngles = resettingRotation;
 
+	}
+
+	void OnCollisionEnter () {
+		m_Rigidbody.velocity = Vector3.zero;
 	}
 }
