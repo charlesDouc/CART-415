@@ -10,8 +10,8 @@ Welcome to my TANKS! repository. Here's some link to naviguate easily in this Gi
 * [3D Models](https://github.com/charlesDouc/CART-415/tree/master/Models)
 
 ## Builds
-* Projection (Lights and Camera) - **[MAC](https://github.com/charlesDouc/CART-415/blob/master/Builds/Projection/MAC/Projection.app.zip)** **[Windows](https://github.com/charlesDouc/CART-415/blob/master/Builds/Projection/Windows/projection_windows.zip)**
-* Dialogue (Sounds) - **[MAC](https://drive.google.com/open?id=1gIbwvquw86Z3oEWmQjwKPU-C-8I-m2mK)** **[Windows](https://drive.google.com/open?id=1xv1u-0GmZZKdmPKXwh4BXEBWUOzNH1QM)**
+* Projection (Lights and Camera) - **[MAC](https://github.com/charlesDouc/CART-415/blob/master/Builds/Projection/MAC/Projection.app.zip)** // **[Windows](https://github.com/charlesDouc/CART-415/blob/master/Builds/Projection/Windows/projection_windows.zip)**
+* Dialogue (Sounds) - **[MAC](https://drive.google.com/open?id=1gIbwvquw86Z3oEWmQjwKPU-C-8I-m2mK)** / **[Windows](https://drive.google.com/open?id=1xv1u-0GmZZKdmPKXwh4BXEBWUOzNH1QM)**
 
 
 ## Credit
