@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sounds/Scenes/Dialogue_end.unity
+- path: Assets/3D Objects/Scenes/3Dobjects_greybox_001.unity
   isLoaded: 1
   isActive: 1
