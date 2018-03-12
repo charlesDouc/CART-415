@@ -13,9 +13,9 @@ Welcome to my TANKS! repository. Here's some links to naviguate easily in this G
 * Dialogue (Sounds) - **[MAC](https://drive.google.com/open?id=1gIbwvquw86Z3oEWmQjwKPU-C-8I-m2mK)** / **[Windows](https://drive.google.com/open?id=1xv1u-0GmZZKdmPKXwh4BXEBWUOzNH1QM)**
 
 
-## Credit
+## Credits
 
-Here's all credit from outside assets I used in my projects.
+Here's all credits from outside assets I used in my projects.
 
 #### Commun
 
