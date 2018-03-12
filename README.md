@@ -2,7 +2,7 @@
 
 Hello there!
 
-Welcome to my TANKS! repository. Here's some link to naviguate easily in this Git:
+Welcome to my TANKS! repository. Here's some links to naviguate easily in this Git:
 
 * [Process Journal](https://github.com/charlesDouc/CART-415/wiki)
 * [Unity Source Files](https://github.com/charlesDouc/CART-415/tree/master/TANKS!)
