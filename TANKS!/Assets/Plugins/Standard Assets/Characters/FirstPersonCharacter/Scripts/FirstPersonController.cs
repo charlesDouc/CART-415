@@ -34,7 +34,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
 		[HideInInspector] public Vector3 m_OriginalCameraPosition;
-        private float m_StepCycle;
         private bool m_Jumping;
 
         // Use this for initialization
@@ -49,10 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_OriginalCameraPosition = m_OriginalCameraPosition == Vector3.zero ? m_Camera.transform.localPosition : m_OriginalCameraPosition;
 			m_FovKick.Setup(m_Camera);
 			m_HeadBob.Setup(m_OriginalCameraPosition, m_StepInterval);
-            m_StepCycle = 0f;
-            m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
-            m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 

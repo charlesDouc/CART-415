@@ -5,10 +5,8 @@ using UnityEngine;
 public class portalTextureSetup : MonoBehaviour {
 
 	// public variables
-	public Camera m_cameraA;
-	public Camera m_cameraB;
-	public Material m_cameraMatA;
-	public Material m_cameraMatB;
+	public Camera[] m_cameras;
+	public Material[] m_cameraMats;
 
 
 	// private variables
@@ -17,19 +15,17 @@ public class portalTextureSetup : MonoBehaviour {
 	// Use this for initialization
 	// ------------------------------------
 	void Start () {
-		if (m_cameraB.targetTexture != null) {
-			m_cameraB.targetTexture.Release ();
-		}
-		m_cameraB.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
-		m_cameraMatB.mainTexture = m_cameraB.targetTexture;
 
+		// Loop to set up all portal's cameras
+		for (int i = 0; i < m_cameras.Length; i ++) {
+			if (m_cameras[i].targetTexture != null) {
+				m_cameras[i].targetTexture.Release ();
+			}
 
-		if (m_cameraA.targetTexture != null) {
-			m_cameraA.targetTexture.Release ();
+			m_cameras[i].targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+			m_cameraMats[i].mainTexture = m_cameras[i].targetTexture;
+			
 		}
-		m_cameraA.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
-		m_cameraMatA.mainTexture = m_cameraA.targetTexture;
-		
 	}
 
 	// ------------------------------------
