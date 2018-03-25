@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sounds\Scripts\Player\TankMovementSound.cs">
     <Files>
-      <File FileName="Assets/Plugins/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="55" Column="25" />
-      <File FileName="Assets/Plugins/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" Line="22" Column="1" />
+      <File FileName="Assets\Plugins\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="37" Column="35" />
+      <File FileName="Assets\Plugins\Standard Assets\Utility\ForcedReset.cs" Line="6" Column="1" />
+      <File FileName="Assets\Plugins\HxVolumetricLighting\Scripts\HxVolumetricLight.cs" Line="477" Column="1" />
+      <File FileName="Assets\Sounds\Scripts\Player\TankMovementSound.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

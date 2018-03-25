@@ -17,7 +17,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
-        [SerializeField] private MouseLook m_MouseLook;
+		public MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
         [SerializeField] private bool m_UseHeadBob;
@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
 
-        private Camera m_Camera;
+		[HideInInspector] public Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -33,21 +33,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private CharacterController m_CharacterController;
         private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
+		[HideInInspector] public Vector3 m_OriginalCameraPosition;
         private float m_StepCycle;
-        private float m_NextStep;
         private bool m_Jumping;
-
 
         // Use this for initialization
         private void Start()
         {
+			Transform[] ParentCam = GetComponentsInChildren<Transform>();
+
+			for(int i = 0; i < ParentCam.Length; i++)
+				if(ParentCam[i].GetComponent<Camera>())
+					m_Camera = ParentCam[i].GetComponent<Camera>();
             m_CharacterController = GetComponent<CharacterController>();
-            m_Camera = Camera.main;
-            m_FovKick.Setup(m_Camera);
-            m_HeadBob.Setup(m_Camera, m_StepInterval);
+			m_OriginalCameraPosition = m_OriginalCameraPosition == Vector3.zero ? m_Camera.transform.localPosition : m_OriginalCameraPosition;
+			m_FovKick.Setup(m_Camera);
+			m_HeadBob.Setup(m_OriginalCameraPosition, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
+            m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
@@ -65,7 +70,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                // PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -103,39 +107,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_Jump)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    // PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
             }
             else
             {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+				if (m_MoveDir.y >= -m_StickToGroundForce)
+					m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+				else
+					m_MoveDir.y = -m_StickToGroundForce;
             }
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
-            ProgressStepCycle(speed);
+            
 
             m_MouseLook.UpdateCursorLock();
         }
-
-
-        private void ProgressStepCycle(float speed)
-        {
-            if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
-            {
-                m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
-                             Time.fixedDeltaTime;
-            }
-
-            if (!(m_StepCycle > m_NextStep))
-            {
-                return;
-            }
-
-            m_NextStep = m_StepCycle + m_StepInterval;
-        }
 			
+
+			
+
 
 
         private void GetInput(out float speed)
