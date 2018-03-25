@@ -7,6 +7,10 @@ public class portalTeleporterScript : MonoBehaviour {
 	// public variables
 	public Transform m_player;
 	public Transform m_reciver;
+	public GameObject[] m_portalActivate;
+	public GameObject m_currentMainCam;
+	public GameObject m_nextMainCam;
+	public bool m_changeBG = false;
 
 	// private variables
 	private bool m_isOverlapping = false;
@@ -45,6 +49,17 @@ public class portalTeleporterScript : MonoBehaviour {
 	void OnTriggerEnter (Collider col) {
 		if (col.gameObject.tag == "Player") {
 			m_isOverlapping = true;
+
+			if (m_portalActivate != null) {
+				for (int i = 0; i < m_portalActivate.Length; i++) {
+					m_portalActivate[i].SetActive(true);
+				}
+			}
+
+			if (m_changeBG) {
+				m_nextMainCam.SetActive(true);
+				m_currentMainCam.SetActive(false);
+			}
 		}
 	}
 
