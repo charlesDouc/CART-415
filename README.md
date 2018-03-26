@@ -40,8 +40,8 @@ Here's all credits from outside assets I used in my projects.
 #### Farewell
 
 * **The Portals**. The code for them is based off the video tutorial made by [Brackeys](https://www.youtube.com/watch?v=cuQao3hEKfs).
-* **[Ambiant Sound](https://freesound.org/people/the_very_Real_Horst/sounds/268140/) by the_very_Real_Horst
-* **[Lake Sound](https://freesound.org/people/Owl/sounds/156525/) by Owl
-* **[Portal Sound](https://freesound.org/people/ayamahambho/sounds/155586/) by ayamahambho
-* **[Monolith Sound](https://freesound.org/people/toiletrolltube/sounds/264522/) by toiletrolltube
+* **[Ambiant Sound](https://freesound.org/people/the_very_Real_Horst/sounds/268140/)** by the_very_Real_Horst
+* **[Lake Sound](https://freesound.org/people/Owl/sounds/156525/)** by Owl
+* **[Portal Sound](https://freesound.org/people/ayamahambho/sounds/155586/)** by ayamahambho
+* **[Monolith Sound](https://freesound.org/people/toiletrolltube/sounds/264522/)** by toiletrolltube
 
