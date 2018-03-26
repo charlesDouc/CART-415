@@ -9,7 +9,6 @@ public class portalTeleporterScript : MonoBehaviour {
 	public Transform m_reciver;
 	public GameObject[] m_portalActivate;
 	public GameObject m_currentMainCam;
-	public GameObject m_nextMainCam;
 	public bool m_changeBG = false;
 
 	// private variables
@@ -57,15 +56,18 @@ public class portalTeleporterScript : MonoBehaviour {
 			}
 
 			if (m_changeBG) {
-				m_nextMainCam.SetActive(true);
-				m_currentMainCam.SetActive(false);
+				Camera mainCam = m_currentMainCam.GetComponent<Camera> ();
+				mainCam.clearFlags = CameraClearFlags.Skybox;
 			}
 		}
 	}
 
 	void OnTriggerExit (Collider col) {
 		if (col.gameObject.tag == "Player") {
+
+
 			m_isOverlapping = false;
 		}
+			
 	}
 }
