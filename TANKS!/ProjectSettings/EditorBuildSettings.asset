@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/LightsCamera/Scenes/Projection.unity
     guid: 9efe918ddd2a91f4090b2f83b1d0824b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sounds/Scenes/Dialogue.unity
     guid: 94172ab306128a545b9d9c1f3fa1a29b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sounds/Scenes/Dialogue_end.unity
     guid: fd206243fc03b4341b4b3b603ef5872b
+  - enabled: 1
+    path: Assets/3D Objects/Scenes/Contact.unity
+    guid: 87aec6e7f9420426a8259d8eda9c1c7e

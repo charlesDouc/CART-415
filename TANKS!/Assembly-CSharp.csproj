@@ -55,7 +55,10 @@
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalCamera.cs" />
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalTeleporterScript.cs" />
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalTextureSetup.cs" />
-     <Compile Include="Assets\3D Objects\Scripts\triggerController.cs" />
+     <Compile Include="Assets\3D Objects\Scripts\Triggers\endLevel.cs" />
+     <Compile Include="Assets\3D Objects\Scripts\Triggers\EndMusicTrigger.cs" />
+     <Compile Include="Assets\3D Objects\Scripts\Triggers\nextSceneTrigger.cs" />
+     <Compile Include="Assets\3D Objects\Scripts\Triggers\triggerController.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
