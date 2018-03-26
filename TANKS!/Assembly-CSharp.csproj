@@ -55,6 +55,7 @@
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalCamera.cs" />
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalTeleporterScript.cs" />
      <Compile Include="Assets\3D Objects\Scripts\Portal\portalTextureSetup.cs" />
+     <Compile Include="Assets\3D Objects\Scripts\triggerController.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
@@ -131,7 +132,6 @@
      <Compile Include="Assets\Sounds\Scripts\Other\waterCollision.cs" />
      <Compile Include="Assets\Sounds\Scripts\Player\TankMovementSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\Player\TankNotes.cs" />
-     <Compile Include="Assets\triggerController.cs" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\3D Objects\Materials\Portal\ScreenCutoutShader.shader" />
      <None Include="Assets\Original\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
