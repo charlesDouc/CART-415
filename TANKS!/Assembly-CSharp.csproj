@@ -62,12 +62,12 @@
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameras_control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\cameraTriggers.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Camera\changeZoneTrigger.cs" />
-     <Compile Include="Assets\LightsCamera\Scripts\gameMaster.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\BadLights.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\EnnemyTrigger_Controller.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\LightBreath_Control.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Lights\LightSwitch_Controller.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Other\bigSphere_Controller.cs" />
+     <Compile Include="Assets\LightsCamera\Scripts\ProjectionLevelManager.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Tank\lightControl.cs" />
      <Compile Include="Assets\Original\Scripts\Tank\TankMovement.cs" />
      <Compile Include="Assets\Sounds\Scripts\Camera\cameraSoundControllerImproved.cs" />

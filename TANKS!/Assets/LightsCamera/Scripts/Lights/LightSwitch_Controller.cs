@@ -76,7 +76,7 @@ public class LightSwitch_Controller : MonoBehaviour {
 
 	void theEnd() {
 		// Get the method in the gm to reload the game
-		gameMaster gmScript = theGameMaster.GetComponent<gameMaster> ();
+		ProjectionLevelManager gmScript = theGameMaster.GetComponent<ProjectionLevelManager> ();
 		gmScript.reload ();
 	}
 }

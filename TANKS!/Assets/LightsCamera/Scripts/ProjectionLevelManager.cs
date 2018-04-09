@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gameMaster : MonoBehaviour {
+public class ProjectionLevelManager : MonoBehaviour {
 
 	//public variables
 	public GameObject[] zones;
