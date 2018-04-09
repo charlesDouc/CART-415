@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4916052, g: 0.53061694, b: 0.5962104, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1429,6 +1429,10 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347891287357348, guid: 3e7ecefdd7fa7412ba5942fcc6721c62, type: 2}
+      propertyPath: m_Name
+      value: LevelMaster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e7ecefdd7fa7412ba5942fcc6721c62, type: 2}

@@ -212,7 +212,7 @@ public class EntityNotes : MonoBehaviour {
 		m_audio.clip = m_lastSequenceNotes;
 		m_audio.Play();
 		yield return new WaitForSeconds(25);
-		GameMasterSound theGMScript = m_theGM.GetComponent<GameMasterSound>();
+		DialogueLevelMaster theGMScript = m_theGM.GetComponent<DialogueLevelMaster>();
 		theGMScript.BeginFade(1);
 		yield return new WaitForSeconds(3);
 		theGMScript.loadScene(1);

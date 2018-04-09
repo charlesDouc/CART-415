@@ -119,7 +119,7 @@ public class EntityNotes_end : MonoBehaviour {
 	public IEnumerator theEnd() {
 		m_audio.clip = m_lastWord;
 		m_audio.Play();
-		GameMasterSound theGMScript = m_theGM.GetComponent<GameMasterSound>();
+		DialogueLevelMaster theGMScript = m_theGM.GetComponent<DialogueLevelMaster>();
 		theGMScript.noMusic();
 		yield return new WaitForSeconds(27);
 		theGMScript.BeginFade(1);

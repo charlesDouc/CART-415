@@ -69,15 +69,15 @@
      <Compile Include="Assets\LightsCamera\Scripts\Other\bigSphere_Controller.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\ProjectionLevelManager.cs" />
      <Compile Include="Assets\LightsCamera\Scripts\Tank\lightControl.cs" />
-     <Compile Include="Assets\Original\Scripts\Tank\TankMovement.cs" />
+     <Compile Include="Assets\Original\Scripts\TankMovement.cs" />
      <Compile Include="Assets\Sounds\Scripts\Camera\cameraSoundControllerImproved.cs" />
      <Compile Include="Assets\Sounds\Scripts\Camera\moveCameraTilt.cs" />
+     <Compile Include="Assets\Sounds\Scripts\DialogueLevelMaster.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityMouvement.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityMovement_end.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityNotes.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityNotes_end.cs" />
      <Compile Include="Assets\Sounds\Scripts\Entity\EntityRingRotation.cs" />
-     <Compile Include="Assets\Sounds\Scripts\GameMasterSound.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\checkpointController.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\seeObjectController.cs" />
      <Compile Include="Assets\Sounds\Scripts\Other\waterCollision.cs" />

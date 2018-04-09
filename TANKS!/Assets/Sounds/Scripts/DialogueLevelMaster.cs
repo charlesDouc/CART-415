@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMasterSound : MonoBehaviour {
+public class DialogueLevelMaster : MonoBehaviour {
 
 	// public variables
 	public Texture2D fadeOutTexture;
