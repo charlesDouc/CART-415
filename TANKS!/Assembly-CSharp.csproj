@@ -83,11 +83,11 @@
      <Compile Include="Assets\A_Projection\Scripts\Other\bigSphere_Controller.cs" />
      <Compile Include="Assets\A_Projection\Scripts\ProjectionLevelManager.cs" />
      <Compile Include="Assets\A_Projection\Scripts\Tank\lightControl.cs" />
-     <Compile Include="Assets\camMainMenu_Controller.cs" />
-     <Compile Include="Assets\cubeMainMenu.cs" />
-     <Compile Include="Assets\iterationTitles_Controller.cs" />
-     <Compile Include="Assets\mainMenuManager.cs" />
-     <Compile Include="Assets\TorchLightMainMenu.cs" />
+     <Compile Include="Assets\MainMenu\Scripts\camMainMenu_Controller.cs" />
+     <Compile Include="Assets\MainMenu\Scripts\cubeMainMenu.cs" />
+     <Compile Include="Assets\MainMenu\Scripts\iterationTitles_Controller.cs" />
+     <Compile Include="Assets\MainMenu\Scripts\mainMenuManager.cs" />
+     <Compile Include="Assets\MainMenu\Scripts\TorchLightMainMenu.cs" />
      <None Include="Assets\A_FareWell\Materials\Portal\ScreenCutoutShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
