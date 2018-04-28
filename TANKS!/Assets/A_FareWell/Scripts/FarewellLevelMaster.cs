@@ -10,12 +10,15 @@ public class FarewellLevelMaster : MonoBehaviour {
 	public AudioSource m_endZone;
 	public Texture2D fadeOutTexture;
 	public float fadeSpeed = 0.01f;
+	public GameObject pauseMenu;
 
 	// private variables
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
 	private int fadeDir = -1;
 	private bool musicChange = false;
+	private bool pause = false;
+
 
 	// ------------------------------------
 	// Use this for initialization
@@ -33,12 +36,22 @@ public class FarewellLevelMaster : MonoBehaviour {
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 
+		// Set the ESC key to quit the application
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.Quit ();
+			pause = !pause;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Backspace)) {
-			SceneManager.LoadScene (0);
+		if (pause) {
+			Time.timeScale = 0.0f;
+			pauseMenu.SetActive(true);
+
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				load(0);
+			}
+
+		} else {
+			Time.timeScale = 1.0f;
+			pauseMenu.SetActive(false);
 		}
 
 		if (musicChange) {
@@ -80,6 +93,10 @@ public class FarewellLevelMaster : MonoBehaviour {
 	// switch music
 	public void changeMusic () {
 		musicChange = true;
+	}
+
+	public void load (int index) {
+		SceneManager.LoadScene (index);
 	}
 		
 }

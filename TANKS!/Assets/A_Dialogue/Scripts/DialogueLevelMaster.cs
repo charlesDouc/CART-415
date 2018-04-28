@@ -9,6 +9,7 @@ public class DialogueLevelMaster : MonoBehaviour {
 	public Texture2D fadeOutTexture;
 	public float fadeSpeed = 0.01f;
 	public AudioSource m_music;
+	public GameObject pauseMenu;
 
 	//private variables
 	private int drawDepth = -1000;
@@ -16,6 +17,8 @@ public class DialogueLevelMaster : MonoBehaviour {
 	private int fadeDir = -1;
 	private float musicVolume = 1.0f;
 	private bool fadeMusic = false;
+	private bool pause = false;
+
 
 	// --------------------------------------
 	// Use this for initialization
@@ -29,23 +32,32 @@ public class DialogueLevelMaster : MonoBehaviour {
 	// Update is called once per frame
 	// --------------------------------------
 	void Update () {
-
-
-
+		Cursor.lockState = CursorLockMode.Locked;
+		
 		if (fadeMusic && musicVolume > 0) {
 			// silence slowly the music
 			musicVolume -= 0.01f;
 			m_music.volume = musicVolume;
 		}
 
-		// Quit the app
-		if (Input.GetKeyDown(KeyCode.Escape)) {
-			Application.Quit();
+		// Set the ESC key to quit the application
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			pause = !pause;
+		}
+
+		if (pause) {
+			Time.timeScale = 0.0f;
+			pauseMenu.SetActive(true);
+
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				loadScene(0);
+			}
+
+		} else {
+			Time.timeScale = 1.0f;
+			pauseMenu.SetActive(false);
 		}
 			
-		if (Input.GetKeyDown(KeyCode.Backspace)) {
-			loadScene(0);
-		}
 	}
 
 	// --------------------------------------

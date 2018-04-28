@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +7,9 @@ public class ProjectionLevelManager : MonoBehaviour {
 
 	//public variables
 	public GameObject[] zones;
+	public GameObject pauseMenu;
+
+	private bool pause = false;
 
 	// ---------------------------------------
 	// Use this for initialization
@@ -17,6 +20,8 @@ public class ProjectionLevelManager : MonoBehaviour {
 			zones[i].SetActive(false);
 			Debug.Log ("Zone " + i + " disabled!");
 		}
+
+		pauseMenu.SetActive(false);
 
 		// Set the first and second zone active
 		zones[0].SetActive(true);
@@ -31,9 +36,21 @@ public class ProjectionLevelManager : MonoBehaviour {
 
 		// Set the ESC key to quit the application
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.Quit();
+			pause = !pause;
 		}
-		
+
+		if (pause) {
+			Time.timeScale = 0.0f;
+			pauseMenu.SetActive(true);
+
+		} else {
+			Time.timeScale = 1.0f;
+			pauseMenu.SetActive(false);
+		}
+
+		if (Input.GetKeyDown (KeyCode.Return) && pause) {
+			load(0);
+		}
 	}
 
 
@@ -43,5 +60,10 @@ public class ProjectionLevelManager : MonoBehaviour {
 	public void reload () {
 		// Reload the game (scene)
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+	}
+
+	public void load (int index) {
+		// Load a scene (scene)
+		SceneManager.LoadScene(index);
 	}
 }

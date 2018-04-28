@@ -215,7 +215,7 @@ public class EntityNotes : MonoBehaviour {
 		DialogueLevelMaster theGMScript = m_theGM.GetComponent<DialogueLevelMaster>();
 		theGMScript.BeginFade(1);
 		yield return new WaitForSeconds(3);
-		theGMScript.loadScene(1);
+		theGMScript.loadScene(4);
 	}
 
 

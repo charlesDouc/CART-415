@@ -13,6 +13,8 @@ public class camMainMenu_Controller : MonoBehaviour {
 	public Texture2D fadeOutTexture;				// Fade texture
 	public float fadeSpeed = 0.01f;					// Fade texture speed
 	public AudioSource m_audio;						// The audio source used fo SFX select
+	public GameObject m_arrowRight;					// Right arrow on screen
+	public GameObject m_arrowLeft;					// Left arrow on screen
 
 	// private variables
 	private bool m_allowRight = false;				// Determine if the camera can go right
@@ -49,6 +51,11 @@ public class camMainMenu_Controller : MonoBehaviour {
 	// Update is called once per frame
 	// ------------------------------------
 	void Update () {
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+		
 		// Check directions pssible
 		checkAllow ();
 
@@ -119,30 +126,40 @@ public class camMainMenu_Controller : MonoBehaviour {
 			m_allowRight = false;
 			m_allowLeft = false;
 			m_canLoad = false;
+			m_arrowLeft.SetActive(false);
+			m_arrowRight.SetActive(false);
 		}
 
 		if (m_currentTarget == 1) {
 			m_allowRight = true;
 			m_allowLeft = false;
 			m_canLoad = true;
+			m_arrowLeft.SetActive(false);
+			m_arrowRight.SetActive(true);
 		}
 
 		if (m_currentTarget == 2) {
 			m_allowRight = true;
 			m_allowLeft = true;
 			m_canLoad = true;
+			m_arrowLeft.SetActive(true);
+			m_arrowRight.SetActive(true);
 		}
 
 		if (m_currentTarget == 3) {
 			m_allowRight = true;
 			m_allowLeft = true;
 			m_canLoad = true;
+			m_arrowLeft.SetActive(true);
+			m_arrowRight.SetActive(true);
 		}
 
 		if (m_currentTarget == 4) {
 			m_allowRight = false;
 			m_allowLeft = true;
 			m_canLoad = false;
+			m_arrowLeft.SetActive(true);
+			m_arrowRight.SetActive(false);
 		}
 	}
 

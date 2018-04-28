@@ -69,7 +69,7 @@ public class LightSwitch_Controller : MonoBehaviour {
 			// Close the light and all
 			Invoke("closeLight", 0.4f);
 			// After 10 second, call the end of the game
-			Invoke ("theEnd", 10f);
+			Invoke ("theEnd", 2f);
 		}
 
 	}
@@ -77,6 +77,6 @@ public class LightSwitch_Controller : MonoBehaviour {
 	void theEnd() {
 		// Get the method in the gm to reload the game
 		ProjectionLevelManager gmScript = theGameMaster.GetComponent<ProjectionLevelManager> ();
-		gmScript.reload ();
+		gmScript.load (0);
 	}
 }
