@@ -45,14 +45,17 @@ public class FarewellLevelMaster : MonoBehaviour {
 			Time.timeScale = 0.0f;
 			pauseMenu.SetActive(true);
 
-			if (Input.GetKeyDown (KeyCode.Return)) {
-				load(0);
-			}
-
 		} else {
 			Time.timeScale = 1.0f;
 			pauseMenu.SetActive(false);
 		}
+
+		if (Input.GetKeyDown (KeyCode.Return) && pause) {
+			StartCoroutine("returnMainMenu");
+			pause = !pause;
+		}
+
+
 
 		if (musicChange) {
 			if (m_portalZone.volume > 0f) {
@@ -98,5 +101,9 @@ public class FarewellLevelMaster : MonoBehaviour {
 	public void load (int index) {
 		SceneManager.LoadScene (index);
 	}
-		
+	
+	IEnumerator returnMainMenu () {
+		yield return new WaitForSeconds(0.5f);
+		load(0);
+	}
 }

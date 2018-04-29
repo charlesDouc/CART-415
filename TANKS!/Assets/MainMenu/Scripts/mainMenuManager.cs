@@ -39,6 +39,9 @@ public class mainMenuManager : MonoBehaviour {
 	// Update is called once per frame
 	// ------------------------------------
 	void Update () {
+		// Make the cursor invisible and lock it on the center of the screen
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 
 	}
 

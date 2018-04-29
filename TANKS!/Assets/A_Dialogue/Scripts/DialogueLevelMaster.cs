@@ -48,15 +48,16 @@ public class DialogueLevelMaster : MonoBehaviour {
 		if (pause) {
 			Time.timeScale = 0.0f;
 			pauseMenu.SetActive(true);
-
-			if (Input.GetKeyDown (KeyCode.Return)) {
-				loadScene(0);
-			}
-
 		} else {
 			Time.timeScale = 1.0f;
 			pauseMenu.SetActive(false);
 		}
+
+		if (Input.GetKeyDown (KeyCode.Return) && pause) {
+			StartCoroutine("returnMainMenu");
+			pause = !pause;
+		}
+
 			
 	}
 
@@ -89,5 +90,10 @@ public class DialogueLevelMaster : MonoBehaviour {
 
 	public void noMusic () {
 		fadeMusic = true;
+	}
+
+	IEnumerator returnMainMenu () {
+		yield return new WaitForSeconds(0.5f);
+		loadScene(0);
 	}
 }

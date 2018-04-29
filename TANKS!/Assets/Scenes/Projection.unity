@@ -2199,7 +2199,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b71ea0f5142025c4c9bd620e7490d7a5, type: 2}
+      objectReference: {fileID: 2100000, guid: bd18a846c2dc54ea5a85039bdc7d3236, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78daef178d71c8343916a7290213400b, type: 2}
   m_IsPrefabParent: 0
@@ -16015,6 +16015,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1399795806983790, guid: 18787d18553b0b645babd4fa01e20d13, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18787d18553b0b645babd4fa01e20d13, type: 2}
   m_IsPrefabParent: 0
@@ -19908,6 +19912,7 @@ GameObject:
   - component: {fileID: 2091306780}
   - component: {fileID: 2091306779}
   - component: {fileID: 2091306781}
+  - component: {fileID: 2091306782}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -20026,6 +20031,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2091306782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091306778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaeafb277cf0e394baa39d3e6f3c4b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2100726228 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e48eac9b25a41de468b3fa58267a1950, type: 3}

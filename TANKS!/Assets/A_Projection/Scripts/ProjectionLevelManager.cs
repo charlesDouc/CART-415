@@ -49,7 +49,8 @@ public class ProjectionLevelManager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Return) && pause) {
-			load(0);
+			StartCoroutine("returnMainMenu");
+			pause = !pause;
 		}
 	}
 
@@ -65,5 +66,10 @@ public class ProjectionLevelManager : MonoBehaviour {
 	public void load (int index) {
 		// Load a scene (scene)
 		SceneManager.LoadScene(index);
+	}
+
+	IEnumerator returnMainMenu () {
+		yield return new WaitForSeconds(0.5f);
+		load(0);
 	}
 }
