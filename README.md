@@ -1,4 +1,4 @@
-# CART-415 - TANKS!
+# My TANKS! game
 
 Hello there!
 
